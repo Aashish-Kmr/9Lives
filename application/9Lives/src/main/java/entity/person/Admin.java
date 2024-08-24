@@ -5,7 +5,7 @@ public class Admin extends Person {
     private String name;
 
     public Admin(int personId, String username, String password, String email, String role, int adminId, String name) {
-        super(personId, username, password, email, role);
+        super(username, password, email, role);
         this.adminId = adminId;
         this.name = name;
     }
@@ -20,5 +20,13 @@ public class Admin extends Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "adminId=" + adminId +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

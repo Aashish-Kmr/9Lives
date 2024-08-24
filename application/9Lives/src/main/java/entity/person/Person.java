@@ -1,22 +1,16 @@
 package entity.person;
 
 public abstract class Person {
-    private final int personId;
     private final String role;
     private String username;
     private String password;
     private String email;
 
-    public Person(int id, String username, String password, String email, String role) {
-        this.personId = id;
+    public Person(String username, String password, String email, String role) {
         this.username = username;
         this.password = password;
         this.email = email;
         this.role = role;
-    }
-
-    public int getPersonId() {
-        return personId;
     }
 
     public String getUsername() {
@@ -46,4 +40,6 @@ public abstract class Person {
     public String getRole() {
         return role;
     }
+
+
 }
