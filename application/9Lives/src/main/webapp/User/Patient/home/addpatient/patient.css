@@ -1,0 +1,165 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: #e9e9e9;
+  padding: 15px;
+  z-index: 99;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding: 0 15px;
+}
+
+.logo-image {
+  width: 50px; /* Adjust the width according to your logo size */
+  height: 50px; /* Adjust the height according to your logo size */
+  margin-right: 10px; /* Space between the logo and the text */
+  border-radius: 50%;
+}
+
+.sidebar a {
+  color: #00659FFF;
+  text-decoration: none;
+}
+
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.menu-items {
+  list-style: none;
+  transition: all 0.4s ease;
+}
+
+.item a {
+  padding: 16px;
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  background-color: aliceblue;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.item a:hover {
+    background:#1aa7a7;
+    color: #fefefe;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 260px;
+  right: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f3f3;
+  color: #f7f3f3;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.logout-btn {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    background: #1aa7a7;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background: #184d4a;
+  }
+
+/* Main Content Area */
+.main {
+    position: relative;
+    margin-left: 260px; /* Sidebar width */
+    margin-top: 60px; /* Navbar height */
+    padding: 20px;
+    background-color: #f7f3f3;
+    /* background: url("https://i.pinimg.com/564x/49/e7/3a/49e73abd9104bb9428980bc5b771b95c.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+  }
+  
+
+/* Form Container */
+.form-container {
+  background: aliceblue;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Row to Align Fields Horizontally */
+.form-row {
+  display: flex;
+  gap: 20px; /* Adjusts the spacing between the age and gender fields */
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Elements */
+form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+form input, form select, form textarea, form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #1aa7a7;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background: #0b5353;
+}

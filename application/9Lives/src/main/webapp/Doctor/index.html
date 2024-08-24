@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu Lateral</title>
+
+        <!--fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <!--css-->
+        <link rel="stylesheet" href="./assets/styles/style.css">
+        <link rel="stylesheet" href="./assets/styles/containerStyle.css">
+
+    </head>
+    <body>
+        
+        <div id="sidebar-container"></div>
+        <!--dashboard-->
+        <main class="dashboard actives ">
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-4">
+            <div class="flex items-center gap-4 text-[#111418]">
+              <!-- //3,115,140 -->
+              <div class=" size-6">   <!--/214 58 31-->          
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ff7161" d="M192 48c0-26.5 21.5-48 48-48L400 0c26.5 0 48 21.5 48 48l0 464-80 0 0-80c0-26.5-21.5-48-48-48s-48 21.5-48 48l0 80-80 0 0-464zM48 96l112 0 0 416L48 512c-26.5 0-48-21.5-48-48L0 320l80 0c8.8 0 16-7.2 16-16s-7.2-16-16-16L0 288l0-64 80 0c8.8 0 16-7.2 16-16s-7.2-16-16-16L0 192l0-48c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48l0 48-80 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l80 0 0 64-80 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l80 0 0 144c0 26.5-21.5 48-48 48l-112 0 0-416 112 0zM312 64c-8.8 0-16 7.2-16 16l0 24-24 0c-8.8 0-16 7.2-16 16l0 16c0 8.8 7.2 16 16 16l24 0 0 24c0 8.8 7.2 16 16 16l16 0c8.8 0 16-7.2 16-16l0-24 24 0c8.8 0 16-7.2 16-16l0-16c0-8.8-7.2-16-16-16l-24 0 0-24c0-8.8-7.2-16-16-16l-16 0z"/></svg>
+              </div>
+                <h2 class="text-[rgb(3,115,140)] text-lg font-bold leading-tight tracking-[-0.015em]">9lives MediAssist</h2>
+            </div>
+           
+              <div class="flex gap-2">
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[rgb(8,75,104)] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Logout</span>
+            </button>
+           
+          </div>
+            </div>
+          </header>
+           
+         <div class="container bg-cover " style="background-image: url('assets\\DoctorHome\\mainImage.png');">
+            <h1 class="greeting">
+                Hello, Doctor!
+            </h1>
+            <a  href="DisplayAppointment.html" target="_blank">
+               <button  class="appointments-link" >
+                  View Appointments!
+              </button>
+           </a>
+            
+            
+        </div>
+        
+        
+        <script src="./assets/scripts/loadSidebar.js"></script>
+    
+        </main>
+    </body>
+</html>

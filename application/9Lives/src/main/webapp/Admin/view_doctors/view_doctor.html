@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Doctors</title>
+    <link rel="stylesheet" href="view_doctor.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="../assets/9LIVES.png" alt="Logo" class="logo-image">
+            <span>Admin Panel</span>
+        </div>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li class="item"><a href="../view_patient/view_patient.html">View Patients</a></li>
+                <li class="item"><a href="view-doctor.html">View Doctors</a></li>
+                <li class="item"><a href="../view_appointment/DisplayAppointment.html">View Appointments</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <span>Welcome, Admin</span>
+        <a href="../../login/login.html" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>Doctor List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Specialization</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody id="doctor-table">
+                <!-- Dynamic content will be added here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="view_doctor.js"></script>
+</body>
+</html>

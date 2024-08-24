@@ -1,0 +1,219 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 260px;
+  background:#e9e9e9;
+  padding: 15px;
+  z-index: 99;
+}
+
+.logo {
+  font-size: 25px;
+  padding: 0 15px;
+}
+
+.sidebar a {
+  color:  #00659FFF;
+  text-decoration: none;
+}
+
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+
+.menu-content::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+
+
+.item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+  background-color: aliceblue;
+  margin-bottom: 5px;
+}
+
+.item i {
+  font-size: 12px;
+}
+
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background:#1aa7a7;
+  color: #fefefe;
+}
+
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #00659FFF;
+  cursor: pointer;
+}
+
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background:  rgb(241, 245, 248);
+  display: none;
+}
+
+.show-submenu ~ .submenu {
+  display: block;
+}
+
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+
+.navbar,
+.main {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+}
+
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 100;
+}
+
+.main h1 {
+  color: #fff; /* Adjust the text color to stand out against the background */
+  font-size: 40px;
+  text-align: center;
+  z-index: 101;
+  position: relative;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding: 0 15px;
+}
+
+.logo-image {
+  width: 50px; /* Adjust the width according to your logo size */
+  height: 50px; /* Adjust the height according to your logo size */
+  margin-right: 10px; /* Space between the logo and the text */
+  border-radius: 50%;
+}
+/* Existing CSS */
+
+
+.navbar #sidebar-close {
+  cursor: pointer;
+}
+/* Existing CSS */
+.navbar {
+  position: fixed;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 25px;
+  background: #fefefe;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar #sidebar-close {
+  cursor: pointer;
+}
+
+/* Logout button styling */
+.logout-btn {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  background: #1aa7a7;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #184d4a;
+}
+
+/* Background styling */
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #ffffff; /* White background behind the image */
+}
+
+.background-wrapper {
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  height: 90%; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff; /* White background */
+  padding: 5px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('../Admin/assets/mainImage.png'); /* Replace with your image path */
+  background-size: contain; /* Image is contained within the div */
+  background-repeat: no-repeat;
+  background-position: center
+}

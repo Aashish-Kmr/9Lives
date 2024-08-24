@@ -1,0 +1,228 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: #e9e9e9;
+  padding: 15px;
+  z-index: 99;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding: 0 15px;
+}
+
+.logo-image {
+  width: 50px; /* Adjust the width according to your logo size */
+  height: 50px; /* Adjust the height according to your logo size */
+  margin-right: 10px; /* Space between the logo and the text */
+  border-radius: 50%;
+}
+
+.sidebar a {
+  color: #00659FFF;
+  text-decoration: none;
+}
+
+.menu-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.menu-items {
+  list-style: none;
+  transition: all 0.4s ease;
+}
+
+.item a {
+  padding: 16px;
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  background-color: aliceblue;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.item a:hover {
+  background: #1aa7a7;
+  color: #fefefe;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 260px;
+  right: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f3f3;
+  color: #f7f3f3;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.logout-btn {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  background: #1aa7a7;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #184d4a;
+}
+
+/* Form Container Styles */
+.form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1aa7a7;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #1aa7a7;
+}
+
+form select,
+form input[type="date"],
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #1aa7a7;;
+}
+
+form button {
+  background: #1aa7a7;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background: #305ab8;
+}
+
+/* Container for Doctor selection and Date input */
+.doctor-date-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Styling for the "Select Doctor" dropdown and the Date input */
+.doctor-date-container select,
+.doctor-date-container input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Optional: Increase the padding or margin if you want more spacing */
+.doctor-date-container select {
+  margin-right: 10px;
+}
+
+.doctor-date-container input[type="date"] {
+  margin-left: 10px;
+}
+
+/* Main Content Area */
+.main {
+  margin-left: 260px;
+  margin-top: 2px;
+  padding: 20px;
+  background: #f7f3f3;
+  height: calc(120vh - 10px);
+}
+/* Overlay for background blur */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  z-index: 1000; /* Ensure overlay is below popup */
+}
+
+/* Confirmation Popup */
+.confirmation-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Ensure popup is on top of the overlay */
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  border-radius: 8px;
+}
+
+.popup-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+#closePopup {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#closePopup:hover {
+  background-color: #218838;
+}
+

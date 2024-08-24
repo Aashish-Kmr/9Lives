@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patient - Hospital Website</title>
+    <link rel="stylesheet" href="patient.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<body>
+    <nav class="sidebar">
+        <a href="#" class="logo">
+            <img src="../assets/9LIVES.png" alt="Logo" class="logo-image" />
+            <b>9 LIVES</b>
+        </a>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li class="item">
+                    <a href="../../home/addpatient/add_patient.html">Add Patient</a>
+                </li>
+                <li class="item">
+                    <a href="../../home/book_appointment/book_appointment.html">Book Appointment</a>
+                </li>
+                <li class="item">
+                    <a href="../../home/view_appointment/display_patient.html">View Appointment</a>
+                        
+                    
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <nav class="navbar">
+        <i class="fa-solid fa-bars" id="sidebar-close"></i>
+        <a href="../../../../login/login.html" class="logout-btn">Logout</a>
+    </nav>
+    
+    <main class="main">
+        <div class="form-container">
+            <h1>Add Patient Details</h1>
+            <form id="addPatientForm">
+                <label for="name">Patient Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter patient's name" required>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" placeholder="Enter patient's age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" name="contact" placeholder="Enter contact number" required>
+                
+                <label for="address">Address</label>
+                <textarea id="address" name="address" placeholder="Enter patient's address" required></textarea>
+                
+                <button type="submit">Add Patient</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="patientscript.js"></script>
+</body>
+</html>

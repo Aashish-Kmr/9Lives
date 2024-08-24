@@ -1,0 +1,329 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>View Appointments</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="./assets//scripts//loadAppointments.js"></script>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/containerStyle.css">
+    
+  </head>
+  <body>
+    <div class=" relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <header class=" w-[90%]  m-auto flex whitespace-nowrap justify-between border-b border-solid border-b-[#f0f2f4] px-10 py-4">
+        <div class="flex items-center gap-4 text-[#111418]">
+          <!-- //3,115,140 -->
+          <div class=" size-6">   <!--/214 58 31-->          
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ff7161" d="M192 48c0-26.5 21.5-48 48-48L400 0c26.5 0 48 21.5 48 48l0 464-80 0 0-80c0-26.5-21.5-48-48-48s-48 21.5-48 48l0 80-80 0 0-464zM48 96l112 0 0 416L48 512c-26.5 0-48-21.5-48-48L0 320l80 0c8.8 0 16-7.2 16-16s-7.2-16-16-16L0 288l0-64 80 0c8.8 0 16-7.2 16-16s-7.2-16-16-16L0 192l0-48c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48l0 48-80 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l80 0 0 64-80 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l80 0 0 144c0 26.5-21.5 48-48 48l-112 0 0-416 112 0zM312 64c-8.8 0-16 7.2-16 16l0 24-24 0c-8.8 0-16 7.2-16 16l0 16c0 8.8 7.2 16 16 16l24 0 0 24c0 8.8 7.2 16 16 16l16 0c8.8 0 16-7.2 16-16l0-24 24 0c8.8 0 16-7.2 16-16l0-16c0-8.8-7.2-16-16-16l-24 0 0-24c0-8.8-7.2-16-16-16l-16 0z"/></svg>
+          </div>
+            <h2 class="text-[rgb(3,115,140)] text-lg font-bold leading-tight tracking-[-0.015em]">9lives MediAssist</h2>
+        </div>
+
+        <div class="flex justify-between">
+        <div class="flex mr-3 ">
+          <a
+            class="hover:bg-black hover:text-white border-2 border-black justify-center flex min-w-[84px] max-w-[480px] cursor-pointer items-center  overflow-hidden rounded-full h-10 px-4 bg-white border-black text-black text-sm font-bold leading-normal tracking-[0.015em]"  href="index.html "
+          > 
+            <span class="truncate">Back </span>
+          </a>
+         
+        </div>
+      
+          <div class="flex ">
+        <button
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center  overflow-hidden rounded-full h-10 px-4 bg-[rgb(8,75,104)] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+        >
+          <span class="truncate">Logout</span>
+        </button>
+       
+      </div>
+        </div>
+      </header> 
+      <div class="layout-container flex h-full grow flex-col">
+        <div id="sidebar-container"></div>
+        <!--dashboard-->
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#111418] tracking-light text-[32px] font-bold min-w-72">View Appointments</p></div>
+            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">This week</h3>
+            <div class="pb-3">
+              <!-- ///Display dates -->
+              <div  class="flex  border-b border-[#dce0e5] px-4 justify-between datetags" >
+                <a class="border-solid hover:border-black hover:text-black  mx-9 flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#637588] pb-[13px] pt-4 flex-1  " onclick="displaylist('d1')" href="#">
+                  <p class="text-black  text-sm border-black leading-normal tracking-[0.015em]">Mon, 5/3</p>
+                </a>
+                <a class="border-b-transparent hover:border-black hover:border-black hover:text-black  mx-9 flex flex-col items-center justify-center border-b-[3px] active:border-b-[#111418] text-[#111418] pb-[13px] pt-4 flex-1 " onclick="displaylist('d2')" href="#" onclick="">
+                  <p class="text-[#637588] text-sm hover:text-black font-bold leading-normal tracking-[0.015em]">Tue, 5/4</p>
+                </a>
+                <a class="hover:border-black hover:text-black mx-9 flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#637588] pb-[13px] pt-4 flex-1" onclick="displaylist('d3')" href="#">
+                  <p class="mx-9 text-[#637588] hover:text-black text-sm font-bold leading-normal tracking-[0.015em]">Wed, 5/5</p>
+                </a>
+                <a class="hover:border-black  mx-9 flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#637588] pb-[13px] pt-4 flex-1"  onclick="displaylist('d4')" href="#">
+                  <p class="text-[#637588] text-sm hover:text-black font-bold leading-normal tracking-[0.015em]">Thu, 5/6</p>
+                </a>
+              </div>
+            </div>
+           
+            <div class=" tag " value="d1">
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/40e335b0-4968-41cf-a2ab-a977a3a46379.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Mark Doe</p>
+                  
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-3">12:00 PM - 1:00 PM</p>
+                </div>
+                
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/0bdeb634-28a5-4578-996b-5213d8974256.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Cognitive Behavioral Therapy</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-2">1:30 PM - 2:30 PM</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-3">1:30 PM - 2:30 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/f455fbee-968f-40d5-a7c9-ff89e3610504.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Cognitive Behavioral Therapy</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-2">3:00 PM - 4:00 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="active hidden tag" value="d2">
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/40e335b0-4968-41cf-a2ab-a977a3a46379.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Mark Doe</p>
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-2">Pulmonology Consultation</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-3">12:00 PM - 1:00 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/0bdeb634-28a5-4578-996b-5213d8974256.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Cognitive Behavioral Therapy</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-2">1:30 PM - 2:30 PM</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-3">1:30 PM - 2:30 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/f455fbee-968f-40d5-a7c9-ff89e3610504.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Cognitive Behavioral Therapy</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-2">3:00 PM - 4:00 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="active hidden tag" value="d3">
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/40e335b0-4968-41cf-a2ab-a977a3a46379.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Stella </p>
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-2">Immunizations</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-3">12:00 PM - 1:00 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/0bdeb634-28a5-4578-996b-5213d8974256.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Cognitive Behavioral Therapy</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-2">1:30 PM - 2:30 PM</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-3">1:30 PM - 2:30 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/f455fbee-968f-40d5-a7c9-ff89e3610504.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Cognitive Behavioral Therapy</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-2">3:00 PM - 4:00 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="active hidden tag" value="d4">
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/40e335b0-4968-41cf-a2ab-a977a3a46379.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Angela Doe</p>
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-2">Initial Consultation</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-3">12:00 PM - 1:00 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/0bdeb634-28a5-4578-996b-5213d8974256.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Cognitive Behavioral Therapy</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-2">1:30 PM - 2:30 PM</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-3">1:30 PM - 2:30 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit"
+                  style='background-image: url("https://cdn.usegalileo.ai/stability/f455fbee-968f-40d5-a7c9-ff89e3610504.png");'
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Cognitive Behavioral Therapy</p>
+                  <p class="text-[#637588] text-sm font-normal leading-normal line-clamp-2">3:00 PM - 4:00 PM</p>
+                </div>
+              </div>
+              <div class="shrink-0">
+                <div class="text-[#111418] flex size-7 items-center justify-center" data-icon="CaretRight" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+         
+      
+        <!-- <script src="./assets/scripts/loadSidebar.js"></s> -->
+      </div>
+    </div>
+  </body>
+</html>

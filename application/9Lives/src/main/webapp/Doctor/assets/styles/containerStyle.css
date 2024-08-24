@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 100%;
+    height: 500px;
+    width: 100rem;
+    margin: 30px auto;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+   
+}
+
+.header {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.greeting {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;;
+}
+
+.appointments-link {
+    /* Overlay 1 */
+    top: 350px;
+   left: 848px;
+     height: 52px;
+     padding: 0 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-family: Manrope;
+     font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #FFFFFFFF;
+    background: rgb(8,75,104);
+    opacity: 1;
+    border: none;
+    border-radius: 20px;
+}
+
+button:hover {
+    color: #FFFFFFFF;
+    background: #0574b4ad;
+    }
+    /* Pressed */
+   button:hover:active {
+    color: #FFFFFFFF;
+    background: #15ABFFAD;
+    }
+    .appointments-link:disabled {
+    opacity: 0.4;
+    }
+.image-container
+{
+    text-align: center;
+    
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+}

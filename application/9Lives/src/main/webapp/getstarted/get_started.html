@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9LIVES</title>
+    
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif; /* Applied Google Font */
+            background-image: url('assets/bg-image.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            height: 80px; /* Size for the logo */
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .popup-box {
+            display: flex;
+            align-items: center;
+            background-color: rgba(234, 251, 255, 0.9);
+            border-radius: 40px;
+            box-shadow: 0 8px 20px rgba(10, 10, 11, 0.3);
+            padding: 40px;
+            max-width: 1200px; /* Reduced width from the previous 1600px */
+            width: 60%;
+            height: 360px; 
+            opacity: 0;
+            transform: translateY(100px);
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .popup-box .content {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .popup-box h1, .popup-box img {
+            font-size: 2.5em;
+            margin: 0 0 20px;
+            color: #333;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        .popup-box p {
+            font-size: 1.2em;
+            color: #666;
+            margin: 0 0 40px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 1.5s;
+        }
+
+        .popup-box button {
+            background-color: #27caea;
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+
+        .popup-box button:hover {
+            background-color: #136c85;
+        }
+
+        .popup-box img {
+            max-width: 300px;
+            border-radius: 30px;
+            object-fit: cover;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo at the top-left corner -->
+    <img src="assets/9LIVES.png" alt="Logo" class="logo">
+
+    <div class="popup-box">
+        <div class="content">
+            <h1>Your Health,<br> Our Commitment to Care !</h1>
+            <p>"At 9 LIVES, we prioritize your well-being with unwavering dedication. Our compassionate team is here to support you on every step of your journey to better health."</p>
+            <button onclick="window.location.href='../login/login.html'">Get Started</button>
+        </div>
+        <img src="assets/home.png" alt="get started" style="height: 380px;width: 380px;">
+    </div>
+
+</body>
+</html>
