@@ -1,6 +1,6 @@
 package presentation;
 
-import controller.person.AdminController;
+import controller.AdminController;
 import entity.person.Admin;
 import entity.person.Person;
 import storage.person.AdminStorage;

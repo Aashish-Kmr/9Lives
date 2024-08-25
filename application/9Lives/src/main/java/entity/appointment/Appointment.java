@@ -48,7 +48,8 @@ public class Appointment {
         CANCELLED("Cancelled");
 
         public final String name;
-        Status(String name){
+
+        Status(String name) {
             this.name = name;
         }
     }

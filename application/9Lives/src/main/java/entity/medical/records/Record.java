@@ -11,7 +11,7 @@ public class Record {
         this.doctorId = doctorId;
     }
 
-    protected int getId() {
+    public int getId() {
         return id;
     }
 

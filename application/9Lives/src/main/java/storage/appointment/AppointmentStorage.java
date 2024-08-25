@@ -19,4 +19,6 @@ public interface AppointmentStorage {
     int getNextId() throws SQLException;
 
     void addAppointment(Appointment appointment) throws SQLException;
+
+    Appointment getAppointment(int appointmentId) throws SQLException;
 }

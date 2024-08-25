@@ -1,4 +1,4 @@
-package controller.person;
+package controller;
 
 import entity.person.Doctor;
 import entity.person.Person;

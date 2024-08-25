@@ -72,6 +72,24 @@ public class AppointmentStorageImpl implements AppointmentStorage {
         }
     }
 
+    @Override
+    public Appointment getAppointment(int id) throws SQLException {
+        String query = "SELECT * FROM appointment WHERE appointment_id = " + id + ";";
+        ResultSet resultSet = dbStatement.executeQuery(query);
+        Appointment.Status status = switch (resultSet.getString("status")) {
+            case "Booked" -> Appointment.Status.BOOKED;
+            case "Cancelled" -> Appointment.Status.CANCELLED;
+            default -> null;
+        };
+        return new Appointment(
+                status,
+                Integer.parseInt(resultSet.getString("appointment_id")),
+                Integer.parseInt(resultSet.getString("patient_id")),
+                Integer.parseInt(resultSet.getString("doctor_id")),
+                resultSet.getString("datetime")
+        );
+    }
+
     private boolean checkAppointmentId(int id) throws SQLException {
         String query = "SELECT * FROM appointment WHERE appointment_id = " + id + ";";
         ResultSet resultSet = dbStatement.executeQuery(query);
