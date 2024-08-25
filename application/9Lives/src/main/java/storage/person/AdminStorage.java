@@ -1,11 +1,15 @@
 package storage.person;
 
 import entity.person.Admin;
+import entity.person.Person;
+
+import java.sql.SQLException;
 
 public interface AdminStorage {
 
-    static AdminStorage getAdminStorage(){
-        return AdminStorageImpl.getAdminStorage();
+    static AdminStorage getInstance() {
+        return AdminStorageImpl.getInstance();
     }
-    public Admin getAdmin(String username);
+
+    Admin getAdmin(Person username) throws SQLException;
 }

@@ -1,11 +1,10 @@
 package entity.person;
 
-public class Admin extends Person {
+public class Admin {
     private final int adminId;
     private String name;
 
-    public Admin(int personId, String username, String password, String email, String role, int adminId, String name) {
-        super(username, password, email, role);
+    public Admin(int adminId, String name) {
         this.adminId = adminId;
         this.name = name;
     }

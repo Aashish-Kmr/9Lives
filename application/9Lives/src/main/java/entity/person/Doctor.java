@@ -1,17 +1,18 @@
 package entity.person;
 
-public class Doctor extends Person {
+public class Doctor {
     private final int doctorId;
     private String firstName;
     private String lastName;
     private String specialization;
+    private String username;
 
-    public Doctor(String username, String password, String email, String role, int doctorId, String firstName, String lastName, String specialization) {
-        super(username, password, email, role);
+    public Doctor(int doctorId, String firstName, String lastName, String specialization, String username) {
         this.doctorId = doctorId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.specialization = specialization;
+        this.username = username;
     }
 
     public int getDoctorId() {
@@ -40,5 +41,23 @@ public class Doctor extends Person {
 
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    @Override
+    public String toString() {
+        return "Doctor{" +
+                "doctorId=" + doctorId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", specialization='" + specialization + '\'' +
+                '}';
     }
 }

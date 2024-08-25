@@ -1,20 +1,18 @@
 package entity.appointment;
 
-import java.time.LocalDateTime;
-
 public class Appointment {
     private final int appointmentId;
     private final int patientId;
     private final int doctorId;
     private Status status;
-    private LocalDateTime dateTime;
+    private String datetime;
 
-    public Appointment(Status status, int appointmentId, int patientId, int doctorId, LocalDateTime dateTime) {
+    public Appointment(Status status, int appointmentId, int patientId, int doctorId, String datetime) {
         this.status = status;
         this.appointmentId = appointmentId;
         this.patientId = patientId;
         this.doctorId = doctorId;
-        this.dateTime = dateTime;
+        this.datetime = datetime;
     }
 
     public Status getStatus() {
@@ -37,16 +35,21 @@ public class Appointment {
         return doctorId;
     }
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
+    public String getDatetime() {
+        return datetime;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
+    public void setDatetime(String datetime) {
+        this.datetime = datetime;
     }
 
     public enum Status {
-        BOOKED,
-        CANCELLED
+        BOOKED("Booked"),
+        CANCELLED("Cancelled");
+
+        public final String name;
+        Status(String name){
+            this.name = name;
+        }
     }
 }

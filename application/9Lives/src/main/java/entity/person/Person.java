@@ -1,6 +1,6 @@
 package entity.person;
 
-public abstract class Person {
+public class Person {
     private final String role;
     private String username;
     private String password;

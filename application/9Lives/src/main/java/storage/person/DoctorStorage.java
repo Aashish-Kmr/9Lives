@@ -1,21 +1,29 @@
 package storage.person;
 
-public interface DoctorStorage {
-    int getNewId();
+import entity.person.Doctor;
 
-    static DoctorStorage getDoctorStorage() {
-        return DoctorStorageImpl.getDoctorStorage();
+import java.sql.SQLException;
+
+public interface DoctorStorage {
+    static DoctorStorage getInstance() {
+        return DoctorStorageImpl.getInstance();
     }
 
-    void getDoctorDetails(int doctorId);
+    int getNextId() throws SQLException;
 
-    void updateFirstName(String firstName);
+    Doctor getDoctor(int doctorId) throws SQLException;
 
-    void updateLastName(String lastName);
+    void addDoctor(Doctor doctor) throws SQLException;
 
-    void updateRole(String role);
+    void updateFirstName(int doctorId, String firstName) throws SQLException;
 
-    void updateSpecialization(String specialization);
+    void updateLastName(int doctorId, String lastName) throws SQLException;
 
-    void removeDoctorDetails(int doctorId);
+    void updateSpecialization(int doctorId, String specialization) throws SQLException;
+
+    void removeDoctor(int doctorId) throws SQLException;
+
+    void showDoctorDetails(int doctorId);
+
+    void showAllDoctors();
 }

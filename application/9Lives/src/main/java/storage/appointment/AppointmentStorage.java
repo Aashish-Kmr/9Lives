@@ -1,14 +1,22 @@
 package storage.appointment;
 
-public interface AppointmentStorage {
-    
-    static AppointmentStorage getAppointmentStorage(){
-        return AppointmentStorageImpl.getAppointmentStorage();
-    }
-    
-    void getAppointmentInfo(int DoctorId);
-    
-    void updateAppointment(int appointmentId);
+import entity.appointment.Appointment;
 
-    void deleteAppointment(int appointmentId);
+import java.sql.SQLException;
+
+public interface AppointmentStorage {
+
+    static AppointmentStorage getInstance() {
+        return AppointmentStorageImpl.getInstance();
+    }
+
+    void cancelAppointment(int appointmentId) throws SQLException;
+
+    void deleteAppointment(int appointmentId) throws SQLException;
+
+    void showAppointments(int doctorId);
+
+    int getNextId() throws SQLException;
+
+    void addAppointment(Appointment appointment) throws SQLException;
 }
