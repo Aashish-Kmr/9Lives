@@ -1,6 +1,7 @@
 package storage.person;
 
 import entity.person.Doctor;
+import entity.person.Person;
 import storage.SQLiteDatabaseStorage;
 
 import java.sql.ResultSet;
@@ -55,6 +56,18 @@ public class DoctorStorageImpl implements DoctorStorage {
                     resultSet.getString("username"));
         else
             return null;
+    }
+
+    public Doctor getDoctor(Person person) throws SQLException {
+        String username = person.getUsername();
+        String query = "SELECT * FROM doctor WHERE username = \"" + person.getUsername() + "\";";
+        ResultSet resultSet = dbStatement.executeQuery(query);
+        resultSet.next();
+        int id = Integer.parseInt(resultSet.getString("doctor_id"));
+        String firstName = resultSet.getString("firstname");
+        String lastName = resultSet.getString("lastname");
+        String specialization = resultSet.getString("specialization");
+        return new Doctor(id, firstName, lastName, specialization, username);
     }
 
     @Override

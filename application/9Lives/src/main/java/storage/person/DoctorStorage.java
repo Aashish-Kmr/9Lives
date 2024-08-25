@@ -1,6 +1,7 @@
 package storage.person;
 
 import entity.person.Doctor;
+import entity.person.Person;
 
 import java.sql.SQLException;
 
@@ -12,6 +13,8 @@ public interface DoctorStorage {
     int getNextId() throws SQLException;
 
     Doctor getDoctor(int doctorId) throws SQLException;
+
+    Doctor getDoctor(Person person) throws SQLException;
 
     void addDoctor(Doctor doctor) throws SQLException;
 
