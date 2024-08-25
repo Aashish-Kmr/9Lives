@@ -20,7 +20,7 @@ public class DoctorController {
 
     static {
         appointmentStorage = AppointmentStorage.getInstance();
-        medicineStorage = MedicalItemStorage.getMedicalTestInstance();
+        medicineStorage = MedicalItemStorage.getMedicineInstance();
         medicalTestStorage = MedicalItemStorage.getMedicalTestInstance();
         medicalRecordStorage = RecordStorage.getMedicalRecordInstance();
         testRecordStorage = RecordStorage.getTestRecordInstance();

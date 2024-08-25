@@ -33,10 +33,11 @@ public class AppointmentStorageImpl implements AppointmentStorage {
             if (resultSet.next()) {
                 System.out.println("Current appointments for doctor with doctor id: " + doctorId);
                 do {
+                    String appointment_id = resultSet.getString("appointment_id");
                     String patient_id = resultSet.getString("patient_id");
                     String datetime = resultSet.getString("datetime");
                     String status = resultSet.getString("status");
-                    System.out.printf("patient id: %s, date & time: %s, status: %s\n", patient_id, datetime, status);
+                    System.out.printf("appointment_id: %s, patient id: %s, date & time: %s, status: %s\n", appointment_id, patient_id, datetime, status);
                 } while (resultSet.next());
             } else {
                 System.out.println("No appointments currently booked for doctor id: " + doctorId);
