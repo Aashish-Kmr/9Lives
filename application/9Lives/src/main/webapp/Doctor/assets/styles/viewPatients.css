@@ -1,0 +1,299 @@
+
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+.hospital-management {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.hospital-management .container-wrapper {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 900px;
+}
+
+.hospital-management .container {
+  position: relative;
+  width: 1337px;
+  height: 808px;
+  top: 23px;
+  left: 39px;
+  background-color: #f3f4f6;
+}
+
+.hospital-management .text-wrapper {
+  position: absolute;
+  top: 53px;
+  left: 76px;
+  font-family: "Lexend-Regular", Helvetica;
+  font-weight: 400;
+  color: #171a1f;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 56px;
+  white-space: nowrap;
+}
+
+.hospital-management .div {
+  width: 632px;
+  top: 211px;
+  left: 76px;
+  position: absolute;
+  height: 245px;
+  background-color: #dee1e6;
+  border-radius: 4px;
+}
+
+.hospital-management .image {
+  position: absolute;
+  width: 158px;
+  height: 201px;
+  top: 23px;
+  left: 450px;
+  object-fit: cover;
+}
+
+.hospital-management .text-wrapper-2 {
+  top: 23px;
+  position: absolute;
+  width: 424px;
+  left: 16px;
+  font-family: "Lexend-Regular", Helvetica;
+  font-weight: 400;
+  color: #171a1f;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.hospital-management .text-wrapper-3 {
+  position: absolute;
+  width: 424px;
+  top: 53px;
+  left: 16px;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #171a1f;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.hospital-management .text-wrapper-4 {
+  position: absolute;
+  width: 424px;
+  top: 83px;
+  left: 16px;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #171a1f;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.hospital-management .button {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 69px;
+  height: 36px;
+  top: 193px;
+  left: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #9f79f3;
+}
+
+.hospital-management .text-wrapper-5 {
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #9f79f3;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.hospital-management .overlap-wrapper {
+  width: 576px;
+  top: 211px;
+  left: 720px;
+  position: absolute;
+  height: 245px;
+  background-color: #dee1e6;
+  border-radius: 4px;
+}
+
+.hospital-management .overlap {
+  position: relative;
+  width: 544px;
+  height: 214px;
+  top: 15px;
+  left: 16px;
+}
+
+.hospital-management .overlap-group {
+  position: absolute;
+  width: 544px;
+  height: 214px;
+  top: 0;
+  left: 0;
+}
+
+.hospital-management .image-2 {
+  position: absolute;
+  width: 160px;
+  height: 213px;
+  top: 1px;
+  left: 384px;
+  background-color: #d9d9d9;
+  border-radius: 3px;
+}
+
+.hospital-management .text-wrapper-6 {
+  position: absolute;
+  width: 424px;
+  top: 0;
+  left: 0;
+  font-family: "Lexend-Regular", Helvetica;
+  font-weight: 400;
+  color: #171a1f;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.hospital-management .text-wrapper-7 {
+  position: absolute;
+  width: 424px;
+  top: 38px;
+  left: 0;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #9095a1;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.hospital-management .text-wrapper-8 {
+  position: absolute;
+  width: 424px;
+  top: 68px;
+  left: 0;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  color: #9095a1;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.hospital-management .img {
+  top: 1px;
+  left: 374px;
+  position: absolute;
+  width: 158px;
+  height: 201px;
+  object-fit: cover;
+}
+
+.hospital-management .div-wrapper {
+  all: unset;
+  box-sizing: border-box;
+  position: absolute;
+  width: 69px;
+  height: 36px;
+  top: 178px;
+  left: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #9f79f3;
+}
+
+.hospital-management .container-2 {
+  width: 632px;
+  top: 494px;
+  left: 72px;
+  position: absolute;
+  height: 245px;
+  background-color: #dee1e6;
+  border-radius: 4px;
+}
+
+.hospital-management .image-wrapper {
+  position: absolute;
+  width: 160px;
+  height: 213px;
+  top: 16px;
+  left: 456px;
+  background-color: #d9d9d9;
+  border-radius: 3px;
+}
+
+.hospital-management .image-3 {
+  top: 12px;
+  left: 0;
+  position: absolute;
+  width: 158px;
+  height: 201px;
+  object-fit: cover;
+}
+
+.hospital-management .text-wrapper-9 {
+  top: 15px;
+  position: absolute;
+  width: 424px;
+  left: 16px;
+  font-family: "Lexend-Regular", Helvetica;
+  font-weight: 400;
+  color: #171a1f;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.hospital-management .overlap-group-wrapper {
+  width: 576px;
+  top: 494px;
+  left: 720px;
+  position: absolute;
+  height: 245px;
+  background-color: #dee1e6;
+  border-radius: 4px;
+}
+
+.hospital-management .image-4 {
+  top: 1px;
+  left: 386px;
+  position: absolute;
+  width: 158px;
+  height: 201px;
+  object-fit: cover;
+}
